@@ -1,4 +1,4 @@
-import { Connection, Repository } from 'typeorm';
+import { Connection, Repository, DeepPartial } from 'typeorm';
 import { DataSource } from 'apollo-datasource';
 import { Blog } from '../entities/Blog';
 
@@ -17,8 +17,16 @@ class BlogAPI extends DataSource {
   }
 
   async findAll() {
-    const list = await this.repository.find();
-    return list;
+    const result = await this.repository.find();
+
+    return result;
+  }
+
+  async saveOne(body: DeepPartial<Blog>[]) {
+    const blog = await this.repository.create(body);
+    const result = await this.repository.save(blog);
+
+    return result;
   }
 }
 

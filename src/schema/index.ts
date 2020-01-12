@@ -1,14 +1,21 @@
 import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
-  type Blog {
+  type BlogModel {
     id: Int!
     title: String
     author: String
     isPublished: Int!
   }
+  input BlogDTO {
+    title: String!
+    author: String!
+  }
   type Query {
-    blogs: [Blog]
+    blogs: [BlogModel]
+  }
+  type Mutation {
+    createBlog(data: BlogDTO): BlogModel
   }
 `;
 
