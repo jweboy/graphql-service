@@ -10,7 +10,7 @@ const options: ConnectionOptions = {
   password: 'jl940630',
   database: 'jweboy',
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [Blog],
 };
 

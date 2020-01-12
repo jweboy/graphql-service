@@ -1,17 +1,10 @@
-const resolvers = {
-  Query: {
-    blogs(parent) {},
-  },
-};
-
 export default {
   Query: {
-    blogs(parent, args, context, info) {
+    async blogs(parent, args, context) {
       const { dataSources } = context;
+      const resp = await dataSources.blogAPI.findAll();
 
-      console.log(new dataSources.blogAPI.getList());
-      return [];
-      // return dataSources.blogAPI.getList();
+      return resp;
     },
   },
 };

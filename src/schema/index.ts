@@ -5,6 +5,7 @@ const typeDefs = gql`
     id: Int!
     title: String
     author: String
+    isPublished: Int!
   }
   type Query {
     blogs: [Blog]

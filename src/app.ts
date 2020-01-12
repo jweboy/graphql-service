@@ -21,11 +21,10 @@ import BlogAPI from './dataSources/blog';
 
 const server = new ApolloServer({
   typeDefs,
-  dataSources: () => ({
-    blogAPI: new BlogAPI(),
-  }),
+  dataSources,
   resolvers,
   tracing: true,
+  introspection: true,
 });
 const app = express();
 

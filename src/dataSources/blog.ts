@@ -1,22 +1,24 @@
-import { getConnection, getConnectionManager } from 'typeorm';
-import { SQLDataSource } from 'datasource-sql';
+import { Connection, Repository } from 'typeorm';
 import { DataSource } from 'apollo-datasource';
 import { Blog } from '../entities/Blog';
 
+// TODO: DataSource 是否需要缓存优化
+
 class BlogAPI extends DataSource {
-  // constructor() {
-  //   super();
+  connection: Connection;
 
-  //   this.connection = getConnection();
-  // }
+  repository: Repository<Blog>;
 
-  async getList() {
-    console.log(this);
-    const connection = getConnection();
-    const blogRepository = connection.getRepository(Blog);
+  constructor(connection: Connection) {
+    super();
 
-    const list = await blogRepository.find();
-    console.table(list);
+    this.connection = connection;
+    this.repository = connection.getRepository(Blog);
+  }
+
+  async findAll() {
+    const list = await this.repository.find();
+    return list;
   }
 }
 
