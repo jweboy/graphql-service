@@ -4,20 +4,6 @@ import typeDefs from './schema';
 import connectDatabase from './entities';
 import dataSources from './dataSources';
 import resolvers from './resolvers';
-import BlogAPI from './dataSources/blog';
-
-// https://www.apollographql.com/docs/apollo-server/v1/servers/express/
-
-// const resolvers = {
-//   Query: {
-//     blogs: () => [
-//       {
-//         id: 1,
-//         title: 'hello world',
-//       },
-//     ],
-//   },
-// };
 
 const server = new ApolloServer({
   typeDefs,

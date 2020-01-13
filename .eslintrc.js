@@ -18,10 +18,11 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'plugin:@typescript-eslint/recommended', // ts规则
     'eslint:recommended', // `eslint` 基准规则
     'airbnb-base', // `airbnb` 基准规则
     'prettier',
+    'plugin:@typescript-eslint/recommended', // ts规则
+    'plugin:import/typescript'
   ],
   plugins: [
     '@typescript-eslint',
@@ -43,5 +44,8 @@ module.exports = {
     'no-console': 1,
     'import/prefer-default-export': 0,
     'no-useless-catch': 0,
+    'import/extensions': [2, { // 省略文件后缀
+      ts: 'never'
+    }],
   }
 };
