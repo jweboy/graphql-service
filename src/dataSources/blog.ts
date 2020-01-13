@@ -17,9 +17,12 @@ class BlogAPI extends DataSource {
   }
 
   async findAll() {
-    const result = await this.repository.find();
+    const [allBlogs, blogCount] = await this.repository.findAndCount();
 
-    return result;
+    return {
+      items: allBlogs,
+      total: blogCount,
+    };
   }
 
   async saveOne(body: DeepPartial<Blog>[]) {

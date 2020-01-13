@@ -7,12 +7,16 @@ const typeDefs = gql`
     author: String
     isPublished: Int!
   }
+  type Blog {
+    items: [BlogModel]
+    total: Int!
+  }
   input BlogDTO {
     title: String!
     author: String!
   }
   type Query {
-    blogs: [BlogModel]
+    blogs: Blog
   }
   type Mutation {
     createBlog(data: BlogDTO): BlogModel
