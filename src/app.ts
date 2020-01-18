@@ -1,5 +1,6 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
+import bodyParser from 'body-parser';
 import typeDefs from './schema';
 import connectDatabase from './entities';
 import dataSources from './dataSources';
@@ -16,6 +17,7 @@ const app = express();
 
 server.applyMiddleware({ app });
 
+app.use(bodyParser.json());
 app.listen({ port: 4000 }, async () => {
   try {
     await connectDatabase();

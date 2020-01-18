@@ -27,6 +27,7 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
+    "dev": "nodemon",
     "prettier": "prettier --write *.js",
     "lint": "eslint --fix ."
   },
@@ -34,10 +35,12 @@
     "@types/node": "^13.1.6",
     "apollo-datasource": "^0.6.4",
     "apollo-server-express": "^2.9.15",
+    "body-parser": "^1.19.0",
     "datasource-sql": "^1.1.0",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
     "mysql": "^2.17.1",
+    "nodemon": "^2.0.2",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.22"
   }
