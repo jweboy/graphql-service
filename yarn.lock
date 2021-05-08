@@ -411,15 +411,7 @@ apollo-cache-control@^0.8.10:
     apollo-server-env "^2.4.3"
     graphql-extensions "^0.10.9"
 
-apollo-datasource@^0.6.3:
-  version "0.6.4"
-  resolved "https://registry.npm.taobao.org/apollo-datasource/download/apollo-datasource-0.6.4.tgz#c0d1604b1a97e004844d4b61bd819a9a6b0a409f"
-  integrity sha1-wNFgSxqX4ASETUthvYGammsKQJ8=
-  dependencies:
-    apollo-server-caching "^0.5.1"
-    apollo-server-env "^2.4.3"
-
-apollo-datasource@^0.6.4:
+apollo-datasource@^0.6.3, apollo-datasource@^0.6.4:
   version "0.6.4"
   resolved "https://registry.npm.taobao.org/apollo-datasource/download/apollo-datasource-0.6.4.tgz?cache=0&sync_timestamp=1577448782310&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fapollo-datasource%2Fdownload%2Fapollo-datasource-0.6.4.tgz#c0d1604b1a97e004844d4b61bd819a9a6b0a409f"
   integrity sha1-wNFgSxqX4ASETUthvYGammsKQJ8=
@@ -2528,6 +2520,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mkdirp@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
+  integrity sha1-PrXtYmInVteaXw4qIh3+utdcL34=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -3740,10 +3737,10 @@ type-is@^1.6.16, type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typeorm@^0.2.22:
-  version "0.2.22"
-  resolved "https://registry.npm.taobao.org/typeorm/download/typeorm-0.2.22.tgz#e85166e29ee4e4248ed73b2b8c977f364ffba606"
-  integrity sha1-6FFm4p7k5CSO1zsrjJd/Nk/7pgY=
+typeorm@^0.2.25:
+  version "0.2.25"
+  resolved "https://registry.nlark.com/typeorm/download/typeorm-0.2.25.tgz#1a33513b375b78cc7740d2405202208b918d7dde"
+  integrity sha1-GjNROzdbeMx3QNJAUgIgi5GNfd4=
   dependencies:
     app-root-path "^3.0.0"
     buffer "^5.1.0"
@@ -3753,8 +3750,9 @@ typeorm@^0.2.22:
     dotenv "^6.2.0"
     glob "^7.1.2"
     js-yaml "^3.13.1"
-    mkdirp "^0.5.1"
+    mkdirp "^1.0.3"
     reflect-metadata "^0.1.13"
+    sha.js "^2.4.11"
     tslib "^1.9.0"
     xml2js "^0.4.17"
     yargonaut "^1.1.2"
